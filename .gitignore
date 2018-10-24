@@ -1,0 +1,26 @@
+
+*.png
+*.bat
+*.mgcb
+*.xnb
+*.spritefont
+bin/Windows/Debug/Content/obj/.mgcontent
+*.mgcontent
+*.dll
+*.exe
+bin/Windows/Debug/Dungeon Invaders.exe.config
+*.pdb
+*.config
+*.manifest
+*.so
+bin/Windows/Debug/MonoGame.Framework.xml
+*.wav
+bin/Windows/Debug/steam_appid.txt
+*.xml
+*.fx
+*.pdn
+*.bmp
+*.txt
+*.tsx
+*.tmx
+*.rb

@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{12ABAA45-8ECE-4A04-990C-2297A6DF5AB6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DungeonInvaders</RootNamespace>
+    <AssemblyName>Dungeon Invaders</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Windows\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Windows\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Packer|x86'">
+    <OutputPath>bin\x86\Packer\</OutputPath>
+    <DefineConstants>PACKER</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Gui\GuiHud.cs" />
+    <Compile Include="Gui\GuiObject.cs" />
+    <Compile Include="Gui\GuiPopup.cs" />
+    <Compile Include="Gui\GuiTitleBackground.cs" />
+    <Compile Include="Gui\GuiButton.cs" />
+    <Compile Include="Gui\GuiSlider.cs" />
+    <Compile Include="Gui\GuiTextBox.cs" />
+    <Compile Include="Gui\HUD\HudExpBar.cs" />
+    <Compile Include="Gui\HUD\HudInventoryMenu.cs" />
+    <Compile Include="Lighting\LightManager.cs" />
+    <Compile Include="Lighting\LightSource.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Networking\NetworkManager.cs" />
+    <Compile Include="Plugins\PluginPackager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="States\DungeonSettingsState.cs" />
+    <Compile Include="States\MainMenuState.cs" />
+    <Compile Include="States\OptionsMenuState.cs" />
+    <Compile Include="States\SinglePlayerGameState.cs" />
+    <Compile Include="States\State.cs" />
+    <Compile Include="States\GameState.cs" />
+    <Compile Include="States\StateManager.cs" />
+    <Compile Include="Util\Entities\ExitEntity.cs" />
+    <Compile Include="Util\Entities\FurnaceEntity.cs" />
+    <Compile Include="Util\Entities\ItemEntity.cs" />
+    <Compile Include="Util\Entities\KeyEntity.cs" />
+    <Compile Include="Util\Entities\OreRockEntity.cs" />
+    <Compile Include="Util\Entities\WeaponEntity.cs" />
+    <Compile Include="Util\Entities\Weapons\SwordEntity.cs" />
+    <Compile Include="Util\Items\HealingItem.cs" />
+    <Compile Include="Util\Items\Item.cs" />
+    <Compile Include="Util\Items\TeleportHomeItem.cs" />
+    <Compile Include="Util\Items\WeaponItem.cs" />
+    <Compile Include="Util\Node.cs" />
+    <Compile Include="Util\Path.cs" />
+    <Compile Include="Util\PathFinder.cs" />
+    <Compile Include="Util\Camera.cs" />
+    <Compile Include="Util\Entities\Entity.cs" />
+    <Compile Include="Util\Entities\LiveEntity.cs" />
+    <Compile Include="Util\Entities\MonsterEntity.cs" />
+    <Compile Include="Util\Entities\Monsters\Walker.cs" />
+    <Compile Include="Util\Entities\PlayerEntity.cs" />
+    <Compile Include="Util\Entities\TileEntity.cs" />
+    <Compile Include="Util\InputManager.cs" />
+    <Compile Include="Util\Map.cs" />
+    <Compile Include="Util\PathFindingParams.cs" />
+    <Compile Include="Plugins\PluginManager.cs" />
+    <Compile Include="Util\Settings.cs" />
+    <Compile Include="Util\Tile.cs" />
+    <Compile Include="Util\User.cs" />
+    <Compile Include="Util\Room.cs" />
+    <Compile Include="Util\TextHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\..\..\DotNetZipLib-DevKit-v1.9\zip-v1.9\Release\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="IronRuby">
+      <HintPath>..\..\..\..\Visual Studio 2010\IronLanguages-main-v1.1.3-0-g93ce72d\IronLanguages-main-93ce72d\bin\Release\IronRuby.dll</HintPath>
+    </Reference>
+    <Reference Include="IronRuby.Libraries">
+      <HintPath>..\..\..\..\Visual Studio 2010\IronLanguages-main-v1.1.3-0-g93ce72d\IronLanguages-main-93ce72d\bin\Release\IronRuby.Libraries.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Dynamic">
+      <HintPath>..\..\..\..\Visual Studio 2010\IronLanguages-main-v1.1.3-0-g93ce72d\IronLanguages-main-93ce72d\bin\Release\Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting">
+      <HintPath>..\..\..\..\Visual Studio 2010\IronLanguages-main-v1.1.3-0-g93ce72d\IronLanguages-main-93ce72d\bin\Release\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Metadata">
+      <HintPath>..\..\..\..\Visual Studio 2010\IronLanguages-main-v1.1.3-0-g93ce72d\IronLanguages-main-93ce72d\bin\Release\Microsoft.Scripting.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Windows\Release\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX, Version=2.6.3.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Windows\Release\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct2D1, Version=2.6.3.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Windows\Release\SharpDX.Direct2D1.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D11, Version=2.6.3.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Windows\Release\SharpDX.Direct3D11.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9, Version=2.6.3.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Windows\Release\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DXGI, Version=2.6.3.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Windows\Release\SharpDX.DXGI.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.MediaFoundation, Version=2.6.3.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Windows\Release\SharpDX.MediaFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.RawInput, Version=2.6.3.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Windows\Release\SharpDX.RawInput.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.XAudio2, Version=2.6.3.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Windows\Release\SharpDX.XAudio2.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.XInput, Version=2.6.3.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Windows\Release\SharpDX.XInput.dll</HintPath>
+    </Reference>
+    <Reference Include="SteamworksNET, Version=9.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Steamworks.NET-master\Steamworks.NET-master\Standalone\bin\x86\Windows\SteamworksNET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rooms\boss[0 0].tmx" />
+    <EmbeddedResource Include="Rooms\Dungeon Floor.tsx" />
+    <EmbeddedResource Include="Rooms\Dungeon Wall.tsx" />
+    <EmbeddedResource Include="Rooms\room[0 0].tmx" />
+    <EmbeddedResource Include="Rooms\room[0 1].tmx" />
+    <EmbeddedResource Include="Rooms\room[0 2].tmx" />
+    <EmbeddedResource Include="Rooms\room[0 3].tmx" />
+    <EmbeddedResource Include="Rooms\room[0 4].tmx" />
+    <EmbeddedResource Include="Rooms\room[0 5].tmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
